@@ -1,0 +1,69 @@
+html {
+	background-color: #e0d3de;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 10%;
+}
+
+.btn-container {
+	margin: 100px auto;
+	width: 80%; /* Utilizamos un porcentaje para que el ancho sea responsive */
+	max-width: 400px; /* Limitamos el ancho máximo del contenedor */
+	text-align: center; /* Centramos los botones horizontalmente */
+}
+
+.btnGral {
+	color: #e0d3de;
+	font-size: 1.1em;
+	/* border-radius: 10px; */
+	/* background-color: #0c0a3e; */
+	margin: 15px; /* Agregamos un margen para separar los botones */
+	box-shadow: 0px 10px 14px -7px #276873;
+	background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color: #599bb3;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+	/* color:#ffffff; */
+	/* font-family:Arial;
+	font-size:20px; */
+	/* font-weight:bold; */
+	padding: 13px 32px;
+	text-decoration: none;
+	/* text-shadow: 0px 1px 0px #3d768a; */
+}
+
+.btnGral:hover {
+	background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	/* background-color: #408c99; */
+}
+.btnGral:active {
+	position: relative;
+	top: 1px;
+}
+
+.btnGral,
+#btnDist,
+#btnTime,
+#btnTemp,
+#btnMass {
+	width: 100%; /* Los botones ocupan todo el ancho del contenedor */
+	height: 75px;
+}
+
+/* Media Query para dispositivos más pequeños */
+@media (max-width: 768px) {
+	.btn-container {
+		width: 90%; /* Ajusta el ancho en dispositivos más pequeños */
+	}
+}
+
+/* Media Query para dispositivos aún más pequeños */
+@media (max-width: 480px) {
+	.btn-container {
+		width: 100%; /* Ocupa todo el ancho en dispositivos muy pequeños */
+	}
+}

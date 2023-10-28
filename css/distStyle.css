@@ -1,0 +1,23 @@
+html {
+	background-color: #f9f8f8;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.btnGral {
+	border-radius: 10px;
+	background-color: #e8c2ca;
+}
+
+/* Media Query para dispositivos más pequeños */
+@media (max-width: 768px) {
+	.btn-container {
+		width: 90%; /* Ajusta el ancho en dispositivos más pequeños */
+	}
+}
+
+/* Media Query para dispositivos aún más pequeños */
+@media (max-width: 480px) {
+	.btn-container {
+		width: 100%; /* Ocupa todo el ancho en dispositivos muy pequeños */
+	}
+}

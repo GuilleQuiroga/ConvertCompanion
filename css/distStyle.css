@@ -1,11 +1,115 @@
 html {
-	background-color: #f9f8f8;
+	background-color: #faf0e6;
 	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.mtr__group {
+	position: relative;
+	padding: 20px 0 0;
+	width: 100%;
+	max-width: 180px;
+}
+
+.mtr__in {
+	font-family: inherit;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #352f44;
+	outline: 0;
+	font-size: 17px;
+	color: #352f44;
+	padding: 7px 0;
+	background: transparent;
+	transition: border-color 0.2s;
+}
+
+.mtr__in::placeholder {
+	color: transparent;
+}
+
+.mtr__in:placeholder-shown ~ .mtr__label__in {
+	font-size: 17px;
+	cursor: text;
+	top: 20px;
+}
+
+.mtr__label__in {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 17px;
+	color: #352f44;
+	pointer-events: none;
+}
+
+.mtr__in:focus {
+	padding-bottom: 6px;
+	font-weight: 700;
+	border-width: 3px;
+	border-image: linear-gradient(to right, #5c5470, #b9b4c7);
+	border-image-slice: 1;
+}
+
+.mtr__in:focus ~ .mtr__label__in {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 17px;
+	color: #b9b4c7;
+	font-weight: 700;
+}
+
+.km__out {
+	font-family: inherit;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #352f44;
+	outline: 0;
+	font-size: 17px;
+	color: #352f44;
+	padding: 7px 0;
+	background: transparent;
+	transition: border-color 0.2s;
+}
+
+.km__out::placeholder {
+	color: #b9b4c7;
+}
+
+/* reset input */
+.mtr__in:required,
+.mtr__in:invalid {
+	box-shadow: none;
+}
+
+/*  */
 .btnGral {
-	border-radius: 10px;
-	background-color: #e8c2ca;
+	transition: all 0.15s ease-in-out;
+	font-family: "Dosis", sans-serif;
+}
+
+.btnGral {
+	width: 150px;
+	height: 60px;
+	border-radius: 50px;
+	background-image: linear-gradient(135deg, #b9b4c7 0%, #5c5470 100%);
+	box-shadow: 0 15px 35px -3px #352f44;
+	outline: none;
+	cursor: pointer;
+	border: none;
+	font-size: 24px;
+	color: #faf0e6;
+}
+
+.btnGral:hover {
+	transform: translateY(3px);
+	box-shadow: none;
+}
+
+.btnGral:active {
+	opacity: 0.5;
 }
 
 /* Media Query para dispositivos más pequeños */

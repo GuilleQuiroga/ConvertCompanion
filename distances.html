@@ -10,15 +10,13 @@
 
 <body>
 
-    <section id="sec-metros">
-        <legend>Metros a Kilometros</legend>
-        <hr>
-        <label for="metros">Meters</label>
-        <input type="number" name="metros" id="metros">
-        <label for="res-metros">Kilometers</label>
-        <input type="number" name="res-metros" id="res-metros" readonly>
-        <button id="btnMtrKm">Convert</button>
-    </section>
+    <div class="mtr__group field">
+        <input type="input" class="mtr__in" id="mtr__in" placeholder="Meters" required="">
+        <label for="mtr__in" class="mtr__label__in">Meters</label>
+        <input type="input" class="km__out" id="km__out" placeholder="Kilometers" readonly>
+        <label for="km__out" class="km__label__out"></label>
+        <button class="btnGral" id="btnMtrKm">CONVERT</button>
+    </div>
 
     <script src="/js/distConv.js"></script>
 </body>

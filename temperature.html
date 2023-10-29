@@ -2,14 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/tempStyle.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Measurement Converter</title>
+	<link rel="stylesheet" href="css/tempStyle.css" />
 </head>
 
 <body>
-    <p>TEMPERATURE</p>
+	<header>
+		<h1>Add some values</h1>
+	</header>
+	<div class="temp__group field">
+		<label for="celsius" class="temps__lbl"><span class="cls__span">
+				CELSIUS
+			</span></label>
+		<input type="input" class="temps" id="celsius" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')" />
+
+		<label for="fahren" class="temps__lbl"><span class="fahren__span">
+				FAHRENHEIT
+			</span></label>
+		<input type="input" class="temps" id="fahren" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')" />
+
+
+		<label for="kelvin" class="temps__lbl"><span class="kelvin__span">KELVIN</span></label>
+		<input type="input" class="temps" id="kelvin" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')" />
+		<button type="reset" id="btnReset">RESET</button>
+	</div>
+
+	<script src="js/tempConv.js"></script>
 </body>
 
 </html>

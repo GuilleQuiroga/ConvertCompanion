@@ -11,11 +11,9 @@ const temps = document.getElementsByClassName(".temps");
 
 /**
  * Conversión de celsius a fahrenheit y a kelvin
- * @returns fahrenheit
  */
 const convCelsiusFahren = () => {
 	let grCelsiusFahren = document.querySelector("#celsius").value;
-
 	let celsius;
 
 	if (grCelsiusFahren == "") {
@@ -46,7 +44,6 @@ const convCelsiusKelvin = () => {
 
 /**
  * Conversión de fahrenheit a celsius y a kelvin
- * @returns fahrenheit
  */
 const convFahrenCelsius = () => {
 	let grFahrenCelsius = document.querySelector("#fahren").value;
@@ -74,7 +71,6 @@ const convFahrenKelvin = () => {
 
 /**
  * Conversión de kelvin a celsius y a fahrenheit
- * @returns kelvin
  */
 const convKelvinCelsius = () => {
 	let grKelvinCelsius = document.querySelector("#kelvin").value;
@@ -103,14 +99,22 @@ const convKelvinFahren = () => {
 
 /**
  * Llamada funciones celsius
+ *
+ * Si solo está escrito el símbolo negativo o el input está vacío,
+ * se dejan los demás inputs en blanco
  */
 
 celsius.addEventListener("keyup", function (event) {
-	let resCelsiusFahren = convCelsiusFahren();
-	fahren.value = `${resCelsiusFahren} ºF`;
+	if (document.querySelector("#celsius").value === "-" || document.querySelector("#celsius").value === "") {
+		fahren.value = "";
+		kelvin.value = "";
+	} else {
+		let resCelsiusFahren = convCelsiusFahren();
+		fahren.value = `${resCelsiusFahren} ºF`;
 
-	let resCelsiusKelvin = convCelsiusKelvin();
-	kelvin.value = `${resCelsiusKelvin} ºK`;
+		let resCelsiusKelvin = convCelsiusKelvin();
+		kelvin.value = `${resCelsiusKelvin} ºK`;
+	}
 });
 
 /**
@@ -118,11 +122,16 @@ celsius.addEventListener("keyup", function (event) {
  */
 
 fahren.addEventListener("keyup", function () {
-	let resFahrenCelsius = convFahrenCelsius();
-	celsius.value = `${resFahrenCelsius} ºC`;
+	if (document.querySelector("#fahren").value === "-" || document.querySelector("#fahren").value === "") {
+		celsius.value = "";
+		kelvin.value = "";
+	} else {
+		let resFahrenCelsius = convFahrenCelsius();
+		celsius.value = `${resFahrenCelsius} ºC`;
 
-	let resFahrenKelvin = convFahrenKelvin();
-	kelvin.value = `${resFahrenKelvin} ºK`;
+		let resFahrenKelvin = convFahrenKelvin();
+		kelvin.value = `${resFahrenKelvin} ºK`;
+	}
 });
 
 /**
@@ -130,11 +139,16 @@ fahren.addEventListener("keyup", function () {
  */
 
 kelvin.addEventListener("keyup", function () {
-	let resKelvinCelsius = convKelvinCelsius();
-	celsius.value = `${resKelvinCelsius} ºC`;
+	if (document.querySelector("#kelvin").value === "-" || document.querySelector("#kelvin").value === "") {
+		celsius.value = "";
+		fahren.value = "";
+	} else {
+		let resKelvinCelsius = convKelvinCelsius();
+		celsius.value = `${resKelvinCelsius} ºC`;
 
-	let resKelvinFahren = convKelvinFahren();
-	fahren.value = `${resKelvinFahren} ºF`;
+		let resKelvinFahren = convKelvinFahren();
+		fahren.value = `${resKelvinFahren} ºF`;
+	}
 });
 
 // Reset de los inputs

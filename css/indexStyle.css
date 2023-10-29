@@ -1,9 +1,10 @@
 html {
-	background-color: #faf0e6;
+	background-color: #2a2f4f;
 	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 h1 {
+	color: #d8d8d8;
 	text-align: center;
 	margin-top: 50px;
 }

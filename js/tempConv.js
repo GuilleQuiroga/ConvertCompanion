@@ -108,7 +108,7 @@ celsius.addEventListener("keyup", function () {
 
 fahren.addEventListener("keyup", function () {
 	let resFahrenCelsius = convFahrenCelsius();
-	celsius.value = `${resFahrenCelsius} ºF`;
+	celsius.value = `${resFahrenCelsius} ºC`;
 
 	let resFahrenKelvin = convFahrenKelvin();
 	kelvin.value = `${resFahrenKelvin} ºK`;

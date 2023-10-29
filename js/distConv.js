@@ -16,5 +16,5 @@ const metrosKilometros = () => {
 
 btnMtrKm.addEventListener("click", () => {
 	let resKilometros = metrosKilometros();
-	kilometros.value = resKilometros;
+	kilometros.value = `${resKilometros} Km.`;
 });

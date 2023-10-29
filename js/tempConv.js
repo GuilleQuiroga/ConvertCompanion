@@ -1,5 +1,6 @@
 // Botones
 const btnTmp = document.querySelector("#btnTmp");
+const btnReset = document.querySelector("#btnReset");
 
 // Temperaturas
 const celsius = document.querySelector("#celsius");
@@ -14,8 +15,18 @@ const temps = document.getElementsByClassName(".temps");
  */
 const convCelsiusFahren = () => {
 	let grCelsiusFahren = document.querySelector("#celsius").value;
-	let fahren = (grCelsiusFahren * 9) / 5 + 32; // ( °C × 9 / 5) + 32 =  °F
-	return fahren;
+
+	let celsius;
+
+	if (grCelsiusFahren == "") {
+		celsius = 0;
+		let fahren = (grCelsiusFahren * 9) / 5 + 32;
+		return fahren.toFixed(2);
+	} else {
+		celsius = parseFloat(grCelsiusFahren);
+		let fahren = (grCelsiusFahren * 9) / 5 + 32;
+		return fahren.toFixed(2);
+	}
 };
 
 const convCelsiusKelvin = () => {
@@ -25,11 +36,11 @@ const convCelsiusKelvin = () => {
 	if (grCelsiusKelvin == "") {
 		celsius = 0;
 		let kelvin = celsius + 273.15;
-		return kelvin;
+		return kelvin.toFixed(2);
 	} else {
 		celsius = parseFloat(grCelsiusKelvin);
 		let kelvin = celsius + 273.15;
-		return kelvin;
+		return kelvin.toFixed(2);
 	}
 };
 
@@ -94,12 +105,12 @@ const convKelvinFahren = () => {
  * Llamada funciones celsius
  */
 
-celsius.addEventListener("keyup", function () {
+celsius.addEventListener("keyup", function (event) {
 	let resCelsiusFahren = convCelsiusFahren();
 	fahren.value = `${resCelsiusFahren} ºF`;
 
 	let resCelsiusKelvin = convCelsiusKelvin();
-	kelvin.value = `${resCelsiusKelvin} K`;
+	kelvin.value = `${resCelsiusKelvin} ºK`;
 });
 
 /**
@@ -124,4 +135,11 @@ kelvin.addEventListener("keyup", function () {
 
 	let resKelvinFahren = convKelvinFahren();
 	fahren.value = `${resKelvinFahren} ºF`;
+});
+
+// Reset de los inputs
+btnReset.addEventListener("click", function () {
+	celsius.value = "";
+	fahren.value = "";
+	kelvin.value = "";
 });

@@ -1,6 +1,7 @@
 html {
 	background-color: #334257;
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -10,7 +11,7 @@ h1 {
 }
 
 .btn__container {
-	margin: 100px auto;
+	margin: auto;
 	width: 80%; /* Utilizamos un porcentaje para que el ancho sea responsive */
 	max-width: 400px; /* Limitamos el ancho máximo del contenedor */
 	text-align: center; /* Centramos los botones horizontalmente */
@@ -18,13 +19,12 @@ h1 {
 
 .btnGral {
 	transition: all 0.15s ease-in-out;
-	font-family: "Dosis", sans-serif;
 }
 
 .btnGral {
 	width: 150px;
 	height: 60px;
-	border-radius: 50px;
+	border-radius: 30px;
 	background-image: linear-gradient(135deg, #b9b4c7 0%, #476072 100%);
 	box-shadow: 0 15px 35px -3px #171717;
 	outline: none;

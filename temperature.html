@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/tempStyle.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/tempStyle.css">
-</head>
+	<body>
+		<div class="temp__group field">
+			<input type="input" class="temps" id="celsius" placeholder="Celsius" />
+			<label for="celsius" class="cls__label"></label>
+			<input type="input" class="temps" id="fahren" placeholder="Fahrenheit" />
+			<label for="fahren" class="frh__label"></label>
+			<input type="input" class="temps" id="kelvin" placeholder="Kelvin" />
+			<label for="kelvin" class="kelvin__label"></label>
+		</div>
 
-<body>
-    <p>TEMPERATURE</p>
-</body>
-
+		<script src="js/tempConv.js"></script>
+	</body>
 </html>

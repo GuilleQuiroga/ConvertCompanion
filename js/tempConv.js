@@ -1,13 +1,10 @@
 // Botones
-const btnTmp = document.querySelector("#btnTmp");
 const btnReset = document.querySelector("#btnReset");
 
 // Temperaturas
 const celsius = document.querySelector("#celsius");
 const fahren = document.querySelector("#fahren");
 const kelvin = document.querySelector("#kelvin");
-
-const temps = document.getElementsByClassName(".temps");
 
 /**
  * Conversión de celsius a fahrenheit y a kelvin
@@ -104,7 +101,7 @@ const convKelvinFahren = () => {
  * se dejan los demás inputs en blanco
  */
 
-celsius.addEventListener("keyup", function (event) {
+celsius.addEventListener("keyup", function () {
 	if (document.querySelector("#celsius").value === "-" || document.querySelector("#celsius").value === "") {
 		fahren.value = "";
 		kelvin.value = "";

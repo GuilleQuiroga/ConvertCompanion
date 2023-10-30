@@ -9,10 +9,47 @@
 </head>
 
 <body>
-	<div class="mtr__group field">
-		<input type="input" class="mtr__in" id="mtr__in" placeholder="Meters" placeholder="Meters" />
-		<input type="input" class="km__out" id="km__out" placeholder="Kilometers" readonly />
-		<button class="btnGral" id="btnMtrKm">CONVERT</button>
+	<header>
+		<h1>Add some values</h1>
+	</header>
+	<div class="dst__group field">
+		<label for="millimeters" class="dist__lbl"><span class="mm__span">
+				MILLIMETERS
+			</span></label>
+		<input type="input" class="dist" id="millimeters" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		<label for="centimeters" class="dist__lbl"><span class="cm__span">
+				CENTIMETERS
+			</span></label>
+		<input type="input" id="centimeters" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		<label for="meters" class="dist__lbl"><span class="m__span">
+				METERS
+			</span></label>
+		<input type="input" id="meters" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		<label for="kilometers" class="dist__lbl"><span class="km__span">
+				KILOMETERS
+			</span></label>
+		<input type="input" id="kilometers" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		<label for="miles" class="dist__lbl"><span class="miles__span">
+				MILES
+			</span></label>
+		<input type="input" id="miles" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		<label for="nauticMiles" class="dist__lbl"><span class="nautMiles__span">
+				NAUTIC MILES
+			</span></label>
+		<input type="input" id="nauticMiles" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		<label for="inches" class="dist__lbl"><span class="inch__span">
+				INCHES
+			</span></label>
+		<input type="input" id="inches" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		<label for="yards" class="dist__lbl"><span class="yard__span">
+				YARDS
+			</span></label>
+		<input type="input" id="yards" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		<label for="feets" class="dist__lbl"><span class="feet__span">
+				FEETS
+			</span></label>
+		<input type="input" id="feets" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		<button type="reset" id="btnReset">RESET</button>
 	</div>
 
 	<script src="/js/distConv.js"></script>

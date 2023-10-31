@@ -145,6 +145,50 @@ const mtrToFeets = () => {
 };
 
 /**
+ * Conversión de kilometros al resto de medidas
+ */
+const kmToMm = () => {
+	let km = document.querySelector("#kilometers").value;
+	let mm = km * 1000000;
+	return mm.toFixed(2);
+};
+const kmToCm = () => {
+	let km = document.querySelector("#kilometers").value;
+	let cm = km * 100000;
+	return cm.toFixed(2);
+};
+const kmToMtr = () => {
+	let km = document.querySelector("#kilometers").value;
+	let mtr = km * 1000;
+	return mtr.toFixed(2);
+};
+const kmToMiles = () => {
+	let km = document.querySelector("#kilometers").value;
+	let miles = km / 1.60934;
+	return miles.toFixed(5);
+};
+const kmToNauticMiles = () => {
+	let km = document.querySelector("#kilometers").value;
+	let nauticMiles = km / 1.852;
+	return nauticMiles.toFixed(5);
+};
+const kmToInches = () => {
+	let km = document.querySelector("#kilometers").value;
+	let inches = km * 39370;
+	return inches.toFixed(3);
+};
+const kmToYards = () => {
+	let km = document.querySelector("#kilometers").value;
+	let yards = km * 1093.61;
+	return yards.toFixed(3);
+};
+const kmToFeets = () => {
+	let km = document.querySelector("#kilometers").value;
+	let feets = km * 3280.84;
+	return feets.toFixed(3);
+};
+
+/**
  * Eventos
  */
 // MILLIMETERS
@@ -237,6 +281,37 @@ meters.addEventListener("keyup", () => {
 		yards.value = `${resMtrToYards} yards`;
 		let resMtrToFeets = mtrToFeets();
 		feets.value = `${resMtrToFeets} fts`;
+	}
+});
+
+// KILOMETERS
+kilometers.addEventListener("keyup", () => {
+	if (document.querySelector("#kilometers").value === "") {
+		millimeters.value = "";
+		centimeters.value = "";
+		meters.value = "";
+		miles.value = "";
+		nauticMiles.value = "";
+		inches.value = "";
+		yards.value = "";
+		feets.value = "";
+	} else {
+		let resKmToMm = kmToMm();
+		millimeters.value = `${resKmToMm} mm`;
+		let resKmToMet = kmToCm();
+		centimeters.value = `${resKmToMet} cm`;
+		let resKmToMtr = kmToMtr();
+		meters.value = `${resKmToMtr} m`;
+		let resKmToMiles = kmToMiles();
+		miles.value = `${resKmToMiles} miles`;
+		let resKmToNauticMiles = kmToNauticMiles();
+		nauticMiles.value = `${resKmToNauticMiles} nautic miles`;
+		let resKmToInches = kmToInches();
+		inches.value = `${resKmToInches} inches`;
+		let resKmToYards = kmToYards();
+		yards.value = `${resKmToYards} yards`;
+		let resKmToFeets = kmToFeets();
+		feets.value = `${resKmToFeets} fts`;
 	}
 });
 

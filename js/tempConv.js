@@ -90,7 +90,6 @@ const convKelvinFahren = () => {
 		grKelvinFahren = parseFloat(grKelvinFahren);
 	}
 	let fahren = ((grKelvinFahren - 273.15) * 9) / 5 + 32;
-	// return (fahren / 5 + 32).toFixed(2);
 	return fahren.toFixed(2);
 };
 

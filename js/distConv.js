@@ -189,11 +189,99 @@ const kmToFeets = () => {
 };
 
 /**
+ * Conversión de millas al resto de medidas
+ */
+const milesToMm = () => {
+	let miles = document.querySelector("#miles").value;
+	let mm = miles * 1609340;
+	return mm.toFixed(2);
+};
+const milesToCm = () => {
+	let miles = document.querySelector("#miles").value;
+	let cm = miles * 160934;
+	return cm.toFixed(2);
+};
+const milesToMtr = () => {
+	let miles = document.querySelector("#miles").value;
+	let mtr = miles * 1609.34;
+	return mtr.toFixed(2);
+};
+const milesToKm = () => {
+	let miles = document.querySelector("#miles").value;
+	let km = miles * 1.60934;
+	return km.toFixed(2);
+};
+const milesToNauticMiles = () => {
+	let miles = document.querySelector("#miles").value;
+	let nauticMiles = miles / 1.15;
+	return nauticMiles.toFixed(4);
+};
+const milesToInches = () => {
+	let miles = document.querySelector("#miles").value;
+	let inches = miles * 63360;
+	return inches.toFixed(2);
+};
+const milesToYards = () => {
+	let miles = document.querySelector("#miles").value;
+	let yards = miles * 1760;
+	return yards.toFixed(2);
+};
+const milesToFeets = () => {
+	let miles = document.querySelector("#miles").value;
+	let feets = miles * 5280;
+	return feets.toFixed(2);
+};
+
+/**
+ * Conversión de millas nauticas al resto de medidas
+ */
+const nauticMilesToMm = () => {
+	let nauticMiles = document.querySelector("#nauticMiles").value;
+	let mm = nauticMiles * 1852000;
+	return mm.toFixed(2);
+};
+const nauticMilesToCm = () => {
+	let nauticMiles = document.querySelector("#nauticMiles").value;
+	let cm = nauticMiles * 185200;
+	return cm.toFixed(2);
+};
+const nauticMilesToMtr = () => {
+	let nauticMiles = document.querySelector("#nauticMiles").value;
+	let mtr = nauticMiles * 1852;
+	return mtr.toFixed(2);
+};
+const nauticMilesToKm = () => {
+	let nauticMiles = document.querySelector("#nauticMiles").value;
+	let km = nauticMiles * 1.852;
+	return km.toFixed(2);
+};
+const nauticMilesToMiles = () => {
+	let nauticMiles = document.querySelector("#nauticMiles").value;
+	let miles = nauticMiles * 1.15078;
+	return miles.toFixed(4);
+};
+const nauticMilesToInches = () => {
+	let nauticMiles = document.querySelector("#nauticMiles").value;
+	let inches = nauticMiles * 72913.42;
+	return inches.toFixed(2);
+};
+const nauticMilesToYards = () => {
+	let nauticMiles = document.querySelector("#nauticMiles").value;
+	let yards = nauticMiles * 2025.37;
+	return yards.toFixed(2);
+};
+const nauticMilesToFeets = () => {
+	let nauticMiles = document.querySelector("#nauticMiles").value;
+	let feets = nauticMiles * 6076.12;
+	return feets.toFixed(2);
+};
+
+/**
  * Eventos
  */
 // MILLIMETERS
 millimeters.addEventListener("keyup", () => {
-	if (document.querySelector("#millimeters").value === "") {
+	if (document.querySelector("#millimeters").value === "" || document.querySelector("#millimeters").value === NaN) {
 		centimeters.value = "";
 		meters.value = "";
 		kilometers.value = "";
@@ -224,7 +312,7 @@ millimeters.addEventListener("keyup", () => {
 
 // CENTIMETERS
 centimeters.addEventListener("keyup", () => {
-	if (document.querySelector("#centimeters").value === "") {
+	if (document.querySelector("#centimeters").value === "" || document.querySelector("#centimeters").value === NaN) {
 		millimeters.value = "";
 		meters.value = "";
 		kilometers.value = "";
@@ -255,7 +343,7 @@ centimeters.addEventListener("keyup", () => {
 
 // METERS
 meters.addEventListener("keyup", () => {
-	if (document.querySelector("#meters").value === "") {
+	if (document.querySelector("#meters").value === "" || document.querySelector("#meters").value === NaN) {
 		millimeters.value = "";
 		centimeters.value = "";
 		kilometers.value = "";
@@ -286,7 +374,7 @@ meters.addEventListener("keyup", () => {
 
 // KILOMETERS
 kilometers.addEventListener("keyup", () => {
-	if (document.querySelector("#kilometers").value === "") {
+	if (document.querySelector("#kilometers").value === "" || document.querySelector("#kilometers").value === NaN) {
 		millimeters.value = "";
 		centimeters.value = "";
 		meters.value = "";
@@ -312,6 +400,68 @@ kilometers.addEventListener("keyup", () => {
 		yards.value = `${resKmToYards} yards`;
 		let resKmToFeets = kmToFeets();
 		feets.value = `${resKmToFeets} fts`;
+	}
+});
+
+// MILES
+miles.addEventListener("keyup", () => {
+	if (document.querySelector("#miles").value === "" || document.querySelector("#miles").value === NaN) {
+		millimeters.value = "";
+		centimeters.value = "";
+		meters.value = "";
+		kilometers.value = "";
+		nauticMiles.value = "";
+		inches.value = "";
+		yards.value = "";
+		feets.value = "";
+	} else {
+		let resMilesToMm = milesToMm();
+		millimeters.value = `${resMilesToMm} mm`;
+		let resMilesToMet = milesToCm();
+		centimeters.value = `${resMilesToMet} cm`;
+		let resMilesToMtr = milesToMtr();
+		meters.value = `${resMilesToMtr} m`;
+		let resMilesToMiles = milesToKm();
+		kilometers.value = `${resMilesToMiles} km`;
+		let resMilesToNauticMiles = milesToNauticMiles();
+		nauticMiles.value = `${resMilesToNauticMiles} nautic miles`;
+		let resMilesToInches = milesToInches();
+		inches.value = `${resMilesToInches} inches`;
+		let resMilesToYards = milesToYards();
+		yards.value = `${resMilesToYards} yards`;
+		let resMilesToFeets = milesToFeets();
+		feets.value = `${resMilesToFeets} fts`;
+	}
+});
+
+// NAUTIC MILES
+nauticMiles.addEventListener("keyup", () => {
+	if (document.querySelector("#nauticMiles").value === "" || document.querySelector("#nauticMiles").value === NaN) {
+		millimeters.value = "";
+		centimeters.value = "";
+		meters.value = "";
+		kilometers.value = "";
+		miles.value = "";
+		inches.value = "";
+		yards.value = "";
+		feets.value = "";
+	} else {
+		let resNauticMilesToMm = nauticMilesToMm();
+		millimeters.value = `${resNauticMilesToMm} mm`;
+		let resNauticMilesToCm = nauticMilesToCm();
+		centimeters.value = `${resNauticMilesToCm} cm`;
+		let resNauticMilesToMtr = nauticMilesToMtr();
+		meters.value = `${resNauticMilesToMtr} m`;
+		let resNauticMilesToKm = nauticMilesToKm();
+		kilometers.value = `${resNauticMilesToKm} km`;
+		let resNauticMilesToMiles = nauticMilesToMiles();
+		miles.value = `${resNauticMilesToMiles} miles`;
+		let resNauticMilesToInches = nauticMilesToInches();
+		inches.value = `${resNauticMilesToInches} inches`;
+		let resNauticMilesToYards = nauticMilesToYards();
+		yards.value = `${resNauticMilesToYards} yards`;
+		let resNauticMilesToFeets = nauticMilesToFeets();
+		feets.value = `${resNauticMilesToFeets} fts`;
 	}
 });
 

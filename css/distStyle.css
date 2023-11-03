@@ -8,7 +8,7 @@
 }
 
 html {
-	background-color: #334257;
+	background-color: #05003a;
 }
 
 h1 {
@@ -63,8 +63,8 @@ label {
 	width: 20%;
 	height: 60px;
 	border-radius: 30px;
-	background-image: linear-gradient(135deg, #b9b4c7 0%, #476072 100%);
-	box-shadow: 0 15px 35px -3px #171717;
+	background-image: linear-gradient(135deg, #439a86 0%, #6c0081 100%);
+	box-shadow: 0 15px 35px -3px #000000;
 	outline: none;
 	border: none;
 	font-size: 24px;

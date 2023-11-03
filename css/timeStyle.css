@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Opens Sans", sans-serif;
+}
+
 html {
-	background-color: #334257;
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	background-color: #05003a;
 }
 
 .btnGral {
@@ -12,8 +20,8 @@ html {
 	width: 150px;
 	height: 60px;
 	border-radius: 50px;
-	background-image: linear-gradient(135deg, #b9b4c7 0%, #476072 100%);
-	box-shadow: 0 15px 35px -3px #171717;
+	background-image: linear-gradient(135deg, #439a86 0%, #6c0081 100%);
+	box-shadow: 0 15px 35px -3px #000000;
 	outline: none;
 	cursor: pointer;
 	border: none;

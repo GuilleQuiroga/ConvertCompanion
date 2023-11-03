@@ -277,6 +277,138 @@ const nauticMilesToFeets = () => {
 };
 
 /**
+ * Conversión de millas pulgadas al resto de medidas
+ */
+const inchesToMm = () => {
+	let inches = document.querySelector("#inches").value;
+	let mm = inches * 25.4;
+	return mm.toFixed(2);
+};
+const inchesToCm = () => {
+	let inches = document.querySelector("#inches").value;
+	let cm = inches * 2.54;
+	return cm.toFixed(2);
+};
+const inchesToMtr = () => {
+	let inches = document.querySelector("#inches").value;
+	let mtr = inches / 39.37;
+	return mtr.toFixed(3);
+};
+const inchesToKm = () => {
+	let inches = document.querySelector("#inches").value;
+	let km = inches / 39370;
+	return km.toFixed(6);
+};
+const inchesToMiles = () => {
+	let inches = document.querySelector("#inches").value;
+	let miles = inches / 63360;
+	return miles.toFixed(6);
+};
+const inchesToNauticMiles = () => {
+	let inches = document.querySelector("#inches").value;
+	let nauticMiles = inches / 72910;
+	return nauticMiles.toFixed(6);
+};
+const inchesToYards = () => {
+	let inches = document.querySelector("#inches").value;
+	let yards = inches / 36;
+	return yards.toFixed(4);
+};
+const inchesToFeets = () => {
+	let inches = document.querySelector("#inches").value;
+	let feets = inches / 12;
+	return feets.toFixed(4);
+};
+
+/**
+ * Conversión de yardas al resto de medidas
+ */
+const yardsToMm = () => {
+	let yards = document.querySelector("#yards").value;
+	let mm = yards * 914.4;
+	return mm.toFixed(2);
+};
+const yardsToCm = () => {
+	let yards = document.querySelector("#yards").value;
+	let cm = yards * 91.44;
+	return cm.toFixed(2);
+};
+const yardsToMtr = () => {
+	let yards = document.querySelector("#yards").value;
+	let mtr = yards / 1.094;
+	return mtr.toFixed(4);
+};
+const yardsToKm = () => {
+	let yards = document.querySelector("#yards").value;
+	let km = yards / 1094;
+	return km.toFixed(6);
+};
+const yardsToMiles = () => {
+	let yards = document.querySelector("#yards").value;
+	let miles = yards / 1760;
+	return miles.toFixed(6);
+};
+const yardsToNauticMiles = () => {
+	let yards = document.querySelector("#yards").value;
+	let nauticMiles = yards / 2025;
+	return nauticMiles.toFixed(6);
+};
+const yardsToInches = () => {
+	let yards = document.querySelector("#yards").value;
+	let inches = yards * 36;
+	return inches.toFixed(2);
+};
+const yardsToFeets = () => {
+	let yards = document.querySelector("#yards").value;
+	let feets = yards * 3;
+	return feets.toFixed(2);
+};
+
+/**
+ * Conversión de pies al resto de medidas
+ */
+const feetsToMm = () => {
+	let feets = document.querySelector("#feets").value;
+	let mm = feets * 304.8;
+	return mm.toFixed(2);
+};
+const feetsToCm = () => {
+	let feets = document.querySelector("#feets").value;
+	let cm = feets * 30.48;
+	return cm.toFixed(2);
+};
+const feetsToMtr = () => {
+	let feets = document.querySelector("#feets").value;
+	let mtr = feets / 3.281;
+	return mtr.toFixed(4);
+};
+const feetsToKm = () => {
+	let feets = document.querySelector("#feets").value;
+	let km = feets / 3281;
+	return km.toFixed(6);
+};
+const feetsToMiles = () => {
+	let feets = document.querySelector("#feets").value;
+	let miles = feets / 5280;
+	return miles.toFixed(6);
+};
+const feetsToNauticMiles = () => {
+	let feets = document.querySelector("#feets").value;
+	let nauticMiles = feets / 6076;
+	return nauticMiles.toFixed(6);
+};
+const feetsToInches = () => {
+	let feets = document.querySelector("#feets").value;
+	let inches = feets * 12;
+	return inches.toFixed(2);
+};
+const feetsToYards = () => {
+	let feets = document.querySelector("#feets").value;
+	let yards = feets / 3;
+	return yards.toFixed(4);
+};
+
+/**
  * Eventos
  */
 // MILLIMETERS
@@ -462,6 +594,99 @@ nauticMiles.addEventListener("keyup", () => {
 		yards.value = `${resNauticMilesToYards} yards`;
 		let resNauticMilesToFeets = nauticMilesToFeets();
 		feets.value = `${resNauticMilesToFeets} fts`;
+	}
+});
+
+// INCHES
+inches.addEventListener("keyup", () => {
+	if (document.querySelector("#inches").value === "" || document.querySelector("#inches").value === NaN) {
+		millimeters.value = "";
+		centimeters.value = "";
+		meters.value = "";
+		kilometers.value = "";
+		nauticMiles.value = "";
+		inches.value = "";
+		yards.value = "";
+		feets.value = "";
+	} else {
+		let resInchesToMm = inchesToMm();
+		millimeters.value = `${resInchesToMm} mm`;
+		let resInchesToCm = inchesToCm();
+		centimeters.value = `${resInchesToCm} cm`;
+		let resInchesToMtr = inchesToMtr();
+		meters.value = `${resInchesToMtr} m`;
+		let resInchesToKm = inchesToKm();
+		kilometers.value = `${resInchesToKm} km`;
+		let resInchesToMiles = inchesToMiles();
+		miles.value = `${resInchesToMiles} miles`;
+		let resInchesToNauticMiles = inchesToNauticMiles();
+		nauticMiles.value = `${resInchesToNauticMiles} nautic miles`;
+		let resInchesToYards = inchesToYards();
+		yards.value = `${resInchesToYards} yards`;
+		let resInchesToFeets = inchesToFeets();
+		feets.value = `${resInchesToFeets} fts`;
+	}
+});
+
+// YARDS
+yards.addEventListener("keyup", () => {
+	if (document.querySelector("#yards").value === "" || document.querySelector("#yards").value === NaN) {
+		millimeters.value = "";
+		centimeters.value = "";
+		meters.value = "";
+		kilometers.value = "";
+		nauticMiles.value = "";
+		inches.value = "";
+		yards.value = "";
+		feets.value = "";
+	} else {
+		let resYardsToMm = yardsToMm();
+		millimeters.value = `${resYardsToMm} mm`;
+		let resYardsToCm = yardsToCm();
+		centimeters.value = `${resYardsToCm} cm`;
+		let resYardsToMtr = yardsToMtr();
+		meters.value = `${resYardsToMtr} m`;
+		let resYardsToKm = yardsToKm();
+		kilometers.value = `${resYardsToKm} km`;
+		let resYardsToMiles = yardsToMiles();
+		miles.value = `${resYardsToMiles} miles`;
+		let resYardsToNauticMiles = yardsToNauticMiles();
+		nauticMiles.value = `${resYardsToNauticMiles} nautic miles`;
+		let resYardsToInches = yardsToInches();
+		inches.value = `${resYardsToInches} inches`;
+		let resYardsToFeets = yardsToFeets();
+		feets.value = `${resYardsToFeets} fts`;
+	}
+});
+
+// FEETS
+feets.addEventListener("keyup", () => {
+	if (document.querySelector("#feets").value === "" || document.querySelector("#feets").value === NaN) {
+		millimeters.value = "";
+		centimeters.value = "";
+		meters.value = "";
+		kilometers.value = "";
+		nauticMiles.value = "";
+		inches.value = "";
+		yards.value = "";
+		feets.value = "";
+	} else {
+		let resFeetsToMm = feetsToMm();
+		millimeters.value = `${resFeetsToMm} mm`;
+		let resFeetsToCm = feetsToCm();
+		centimeters.value = `${resFeetsToCm} cm`;
+		let resFeetsToMtr = feetsToMtr();
+		meters.value = `${resFeetsToMtr} m`;
+		let resFeetsToKm = feetsToKm();
+		kilometers.value = `${resFeetsToKm} km`;
+		let resFeetsToMiles = feetsToMiles();
+		miles.value = `${resFeetsToMiles} miles`;
+		let resFeetsToNauticMiles = feetsToNauticMiles();
+		nauticMiles.value = `${resFeetsToNauticMiles} nautic miles`;
+		let resFeetsToInches = feetsToInches();
+		inches.value = `${resFeetsToInches} inches`;
+		let resFeetsToYards = feetsToYards();
+		yards.value = `${resFeetsToYards} yards`;
 	}
 });
 

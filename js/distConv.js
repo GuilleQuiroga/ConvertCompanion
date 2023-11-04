@@ -28,8 +28,11 @@ const convertFromMillimeters = (unit) => {
 		yards: (mm / 914.4).toFixed(8),
 		feet: (mm / 304.8).toFixed(8),
 	};
-
-	return conversions[unit] || "Invalid unit";
+	if (mm == "") {
+		conversions[unit] = null;
+	} else {
+		return conversions[unit] || "Invalid unit";
+	}
 };
 
 /**
@@ -49,7 +52,11 @@ const convertFromCm = (unit) => {
 		feet: (cm / 30.48).toFixed(4),
 	};
 
-	return conversions[unit] || "Invalid unit";
+	if (cm == "") {
+		conversions[unit] = null;
+	} else {
+		return conversions[unit] || "Invalid unit";
+	}
 };
 
 /**
@@ -69,8 +76,11 @@ const convertFromMtr = (unit) => {
 		yards: (mtr * 1.09361).toFixed(4),
 		feet: (mtr * 3.281).toFixed(4),
 	};
-
-	return conversions[unit] || "Invalid unit";
+	if (mtr == "") {
+		conversions[unit] = null;
+	} else {
+		return conversions[unit] || "Invalid unit";
+	}
 };
 
 /**
@@ -91,7 +101,11 @@ const convertFromKm = (unit) => {
 		feet: (km * 3280.84).toFixed(3),
 	};
 
-	return conversions[unit] || "Invalid unit";
+	if (km == "") {
+		conversions[unit] = null;
+	} else {
+		return conversions[unit] || "Invalid unit";
+	}
 };
 
 /**
@@ -111,7 +125,11 @@ const convertFromMiles = (unit) => {
 		feet: (miles * 5280).toFixed(2),
 	};
 
-	return conversions[unit] || "Invalid unit";
+	if (miles == "") {
+		conversions[unit] = null;
+	} else {
+		return conversions[unit] || "Invalid unit";
+	}
 };
 
 /**
@@ -132,7 +150,11 @@ const convertFromNauticMiles = (unit) => {
 		feet: (nauticalMiles * 6076.12).toFixed(2),
 	};
 
-	return conversions[unit] || "Invalid unit";
+	if (nauticalMiles == "") {
+		conversions[unit] = null;
+	} else {
+		return conversions[unit] || "Invalid unit";
+	}
 };
 
 /**
@@ -152,7 +174,11 @@ const convertFromInches = (unit) => {
 		feet: (inches / 12).toFixed(4),
 	};
 
-	return conversions[unit] || "Invalid unit";
+	if (inches == "") {
+		conversions[unit] = null;
+	} else {
+		return conversions[unit] || "Invalid unit";
+	}
 };
 
 /**
@@ -172,7 +198,11 @@ const convertFromYards = (unit) => {
 		feet: (yards * 3).toFixed(2),
 	};
 
-	return conversions[unit] || "Invalid unit";
+	if (yards == "") {
+		conversions[unit] = null;
+	} else {
+		return conversions[unit] || "Invalid unit";
+	}
 };
 
 /**
@@ -193,7 +223,11 @@ const convertFromFeets = (unit) => {
 		yards: (feets / 3).toFixed(2),
 	};
 
-	return conversions[unit] || "Invalid unit";
+	if (feets == "") {
+		conversions[unit] = null;
+	} else {
+		return conversions[unit] || "Invalid unit";
+	}
 };
 
 /**

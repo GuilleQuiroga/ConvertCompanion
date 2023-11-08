@@ -16,15 +16,45 @@ h1 {
 	margin-bottom: 3%;
 }
 
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.foot {
+	color: #ffffff;
+	padding: 20px;
+	margin: auto;
+	margin-top: 40px;
+	width: 80%;
+	max-width: 400px;
+	text-align: center;
+	border: 3px solid #ffffff;
+	box-shadow: 0 0 15px 0 #dbdbdb;
+}
+
+.foot .copy {
+	font-size: 0.75em;
+}
+
+.message {
+	font-size: 35px;
+	transition: all 0.12s ease-in-out;
+}
+
+.message:hover {
+	font-size: 35px;
+	color: #00ff15;
+}
+
 .btn__container {
 	padding: 30px;
 	margin: auto;
-	width: 80%; /* Utilizamos un porcentaje para que el ancho sea responsive */
-	max-width: 400px; /* Limitamos el ancho máximo del contenedor */
-	text-align: center; /* Centramos los botones horizontalmente */
+	width: 80%;
+	max-width: 400px;
+	text-align: center;
 	border: 3px solid #ffffff;
 	box-shadow: 0 0 15px 0 #dbdbdb;
-	/* box-shadow: 0 0 25px 0 #00ffff; */
 }
 
 .btn__container button {

@@ -105,14 +105,14 @@ a {
 
 /* Media Query para dispositivos más pequeños */
 @media (max-width: 768px) {
-	.btnGral-container {
+	.btn__container {
 		width: 90%; /* Ajusta el ancho en dispositivos más pequeños */
 	}
 }
 
 /* Media Query para dispositivos aún más pequeños */
 @media (max-width: 480px) {
-	.btnGral-container {
+	.btn__container {
 		width: 100%; /* Ocupa todo el ancho en dispositivos muy pequeños */
 	}
 }

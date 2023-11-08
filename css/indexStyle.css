@@ -1,48 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 	font-family: "Opens Sans", sans-serif;
 }
 
 html {
-	background-color: #05003a;
+	background-color: #2d2c3f;
 }
 
 h1 {
-	color: #d8d8d8;
+	color: #ffffff;
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 3%;
+	margin-bottom: 3%;
 }
 
 .btn__container {
+	padding: 30px;
 	margin: auto;
 	width: 80%; /* Utilizamos un porcentaje para que el ancho sea responsive */
 	max-width: 400px; /* Limitamos el ancho máximo del contenedor */
 	text-align: center; /* Centramos los botones horizontalmente */
+	border: 3px solid #ffffff;
+	box-shadow: 0 0 15px 0 #dbdbdb;
+	/* box-shadow: 0 0 25px 0 #00ffff; */
+}
+
+.btn__container button {
+	margin: 15px 0; /* separacion de los botones */
 }
 
 .btnGral {
-	transition: all 0.12s ease-in-out;
-}
-
-.btnGral {
-	width: 150px;
-	height: 60px;
 	border-radius: 30px;
-	background-image: linear-gradient(135deg, #439a86 0%, #6c0081 100%);
-	box-shadow: 0 15px 35px -3px #000000;
+	background-color: #2d2c3f;
 	outline: none;
 	cursor: pointer;
-	border: none;
 	font-size: 24px;
-	color: #d8d8d8;
+	color: #ffffff;
+	transition: all 0.12s ease-in-out;
+	border: 1px solid #ffffff;
+	box-shadow: 0 0 20px 0 #161616;
 }
 
 .btnGral:hover {
 	transform: translateY(3px);
+	color: #c7c7c7;
+	background-color: rgba(36, 35, 53, 0.993);
 	box-shadow: none;
 }
 
@@ -67,7 +71,6 @@ h1 {
 #btnMass {
 	width: 100%; /* Los botones ocupan todo el ancho del contenedor */
 	height: 75px;
-	margin-top: 40px;
 }
 
 /* Media Query para dispositivos más pequeños */

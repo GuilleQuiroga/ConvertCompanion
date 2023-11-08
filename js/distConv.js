@@ -86,7 +86,6 @@ const convertFromMtr = (unit) => {
 /**
  * Conversión de kilometros al resto de medidas
  */
-
 const convertFromKm = (unit) => {
 	const km = parseFloat(document.querySelector("#kilometers").value);
 
@@ -135,7 +134,6 @@ const convertFromMiles = (unit) => {
 /**
  * Conversión de millas nauticas al resto de medidas
  */
-
 const convertFromNauticMiles = (unit) => {
 	const nauticalMiles = parseFloat(document.querySelector("#nauticMiles").value);
 
@@ -247,14 +245,14 @@ millimeters.addEventListener("keyup", () => {
 		yards.value = "";
 		feets.value = "";
 	} else {
-		centimeters.value = convertFromMillimeters("cm") + " cm";
-		meters.value = convertFromMillimeters("meter") + " m";
-		kilometers.value = convertFromMillimeters("km") + " km";
-		miles.value = convertFromMillimeters("miles") + " miles";
-		nauticMiles.value = convertFromMillimeters("nauticalMiles") + " nautic miles";
-		inches.value = convertFromMillimeters("inches") + " inches";
-		yards.value = convertFromMillimeters("yards") + " yards";
-		feets.value = convertFromMillimeters("feet") + " feet";
+		centimeters.value = convertFromMillimeters("cm");
+		meters.value = convertFromMillimeters("meter");
+		kilometers.value = convertFromMillimeters("km");
+		miles.value = convertFromMillimeters("miles");
+		nauticMiles.value = convertFromMillimeters("nauticalMiles");
+		inches.value = convertFromMillimeters("inches");
+		yards.value = convertFromMillimeters("yards");
+		feets.value = convertFromMillimeters("feet");
 	}
 });
 

@@ -11,14 +11,12 @@ const kelvin = document.querySelector("#kelvin");
  */
 const convCelsiusFahren = () => {
 	let grCelsiusFahren = document.querySelector("#celsius").value;
-	let celsius;
 
 	if (grCelsiusFahren == "") {
-		celsius = 0;
 		let fahren = (grCelsiusFahren * 9) / 5 + 32;
 		return fahren.toFixed(2);
 	} else {
-		celsius = parseFloat(grCelsiusFahren);
+		grCelsiusFahren = parseFloat(grCelsiusFahren);
 		let fahren = (grCelsiusFahren * 9) / 5 + 32;
 		return fahren.toFixed(2);
 	}

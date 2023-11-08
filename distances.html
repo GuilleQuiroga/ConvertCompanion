@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Measurement Converter</title>
 	<link rel="stylesheet" href="css/distStyle.css" />
+	<script src="https://kit.fontawesome.com/52a64e3610.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,8 +18,8 @@
 			<label for="millimeters" class="dist__lbl"><span class="mm__span">
 					MILLIMETERS
 				</span></label>
-			<input type="input" class="dist" id="millimeters"
-				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<input type="input" class="dist" id="millimeters" oninput="this.value = this.value.replace(/[^0-9.]/g, '')"
+				autofocus />
 			<label for="centimeters" class="dist__lbl"><span class="cm__span">
 					CENTIMETERS
 				</span></label>
@@ -56,7 +57,10 @@
 		</div>
 	</div>
 	<div class="btnContainer">
-		<button type="reset" id="btnReset">RESET</button>
+		<button type="reset" id="btnReset"><i class="fa-solid fa-rotate-left"></i></button>
+		<a href="index.html"><button id="btnReset">
+				<i class="fa-solid fa-house-chimney"></i>
+			</button></a>
 	</div>
 
 	<script src="/js/distConv.js"></script>

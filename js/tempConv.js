@@ -1,5 +1,4 @@
 // Botones
-const btnTmp = document.querySelector("#btnTmp");
 const btnReset = document.querySelector("#btnReset");
 
 // Temperaturas
@@ -7,21 +6,17 @@ const celsius = document.querySelector("#celsius");
 const fahren = document.querySelector("#fahren");
 const kelvin = document.querySelector("#kelvin");
 
-const temps = document.getElementsByClassName(".temps");
-
 /**
  * Conversión de celsius a fahrenheit y a kelvin
  */
 const convCelsiusFahren = () => {
 	let grCelsiusFahren = document.querySelector("#celsius").value;
-	let celsius;
 
 	if (grCelsiusFahren == "") {
-		celsius = 0;
 		let fahren = (grCelsiusFahren * 9) / 5 + 32;
 		return fahren.toFixed(2);
 	} else {
-		celsius = parseFloat(grCelsiusFahren);
+		grCelsiusFahren = parseFloat(grCelsiusFahren);
 		let fahren = (grCelsiusFahren * 9) / 5 + 32;
 		return fahren.toFixed(2);
 	}
@@ -93,7 +88,6 @@ const convKelvinFahren = () => {
 		grKelvinFahren = parseFloat(grKelvinFahren);
 	}
 	let fahren = ((grKelvinFahren - 273.15) * 9) / 5 + 32;
-	// return (fahren / 5 + 32).toFixed(2);
 	return fahren.toFixed(2);
 };
 
@@ -104,7 +98,7 @@ const convKelvinFahren = () => {
  * se dejan los demás inputs en blanco
  */
 
-celsius.addEventListener("keyup", function (event) {
+celsius.addEventListener("keyup", function () {
 	if (document.querySelector("#celsius").value === "-" || document.querySelector("#celsius").value === "") {
 		fahren.value = "";
 		kelvin.value = "";

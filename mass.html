@@ -6,10 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Measurement Converter</title>
     <link rel="stylesheet" href="css/massStyle.css">
+    <script src="https://kit.fontawesome.com/52a64e3610.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <p>MASS</p>
+    <header>
+        <h1>Add some values</h1>
+    </header>
+    <div class="time__group field">
+        <div class="inside__container">
+            <label for="milligrams" class="mass__lbl"><span class="mlg__span">
+                    MILLIGRAMS
+                </span></label>
+            <input type="input" id="milligrams" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" autofocus />
+            <label for="grams" class="mass__lbl"><span class="gr__span">
+                    GRAMS
+                </span></label>
+            <input type="input" id="grams" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+            <label for="kilograms" class="mass__lbl"><span class="kg__span">
+                    KILOGRAMS
+                </span></label>
+            <input type="input" id="kilograms" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+        </div>
+        <div class="inside__container">
+            <label for="tons" class="mass__lbl"><span class="tons__span">
+                    TONS
+                </span></label>
+            <input type="input" id="tons" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+            <label for="pounds" class="mass__lbl"><span class="pounds__span">
+                    POUNDS
+                </span></label>
+            <input type="input" id="pounds" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+            <label for="ounces" class="mass__lbl"><span class="ounces__span">
+                    OUNCES
+                </span></label>
+            <input type="input" id="ounces" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+        </div>
+    </div>
+    <div class="btnContainer">
+        <button type="reset" id="btnReset"><i class="fa-solid fa-rotate-left"></i></button>
+        <a href="index.html"><button id="btnReset">
+                <i class="fa-solid fa-house-chimney"></i>
+            </button></a>
+    </div>
+
+    <script src="js/massConv.js"></script>
 </body>
 
 </html>

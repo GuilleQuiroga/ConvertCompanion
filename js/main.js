@@ -47,6 +47,9 @@
 	/*******************************************************************
 	 ****************	HIDDEN ELEMENTS FROM HTML  *********************
 	 *******************************************************************/
+	// Title reset
+	const resetWeb = document.getElementById("tittleReset");
+
 	// Reset Button
 	const hiddenResetBtn = document.getElementById("reset__container");
 	hiddenResetBtn.style.display = "none";
@@ -98,6 +101,14 @@
 	btnTime.addEventListener("click", function () {
 		hiddenTime.style.display = "flex";
 		hiddenResetBtn.style.display = "flex";
+		hiddenTemp.style.display = "none";
+		hiddenDist.style.display = "none";
+		hiddenMass.style.display = "none";
+	});
+	// Main reset
+	resetWeb.addEventListener("click", function () {
+		hiddenTime.style.display = "none";
+		hiddenResetBtn.style.display = "none";
 		hiddenTemp.style.display = "none";
 		hiddenDist.style.display = "none";
 		hiddenMass.style.display = "none";
@@ -218,7 +229,9 @@
 
 	// Nautic Miles
 	const convertFromNauticMiles = (unit) => {
-		const nauticalMiles = parseFloat(document.querySelector("#nauticMiles").value);
+		const nauticalMiles = parseFloat(
+			document.querySelector("#nauticMiles").value
+		);
 
 		const conversions = {
 			mm: (nauticalMiles * 1852000).toFixed(2),
@@ -927,7 +940,10 @@
 	// TEMPERATURE
 	// Celsius
 	celsius.addEventListener("keyup", function () {
-		if (document.querySelector("#celsius").value === "-" || document.querySelector("#celsius").value === "") {
+		if (
+			document.querySelector("#celsius").value === "-" ||
+			document.querySelector("#celsius").value === ""
+		) {
 			fahren.value = "";
 			kelvin.value = "";
 		} else {
@@ -941,7 +957,10 @@
 
 	// Fahrenheit
 	fahren.addEventListener("keyup", function () {
-		if (document.querySelector("#fahren").value === "-" || document.querySelector("#fahren").value === "") {
+		if (
+			document.querySelector("#fahren").value === "-" ||
+			document.querySelector("#fahren").value === ""
+		) {
 			celsius.value = "";
 			kelvin.value = "";
 		} else {
@@ -955,7 +974,10 @@
 
 	// Kelvin
 	kelvin.addEventListener("keyup", function () {
-		if (document.querySelector("#kelvin").value === "-" || document.querySelector("#kelvin").value === "") {
+		if (
+			document.querySelector("#kelvin").value === "-" ||
+			document.querySelector("#kelvin").value === ""
+		) {
 			celsius.value = "";
 			fahren.value = "";
 		} else {

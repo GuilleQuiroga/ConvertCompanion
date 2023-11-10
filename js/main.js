@@ -48,7 +48,7 @@
 	 ****************	HIDDEN ELEMENTS FROM HTML  *********************
 	 *******************************************************************/
 	// Reset Button
-	const hiddenResetBtn = document.getElementById("btnReset");
+	const hiddenResetBtn = document.getElementById("reset__container");
 	hiddenResetBtn.style.display = "none";
 
 	// Distance
@@ -73,7 +73,7 @@
 	// Distance
 	btnDist.addEventListener("click", function () {
 		hiddenDist.style.display = "flex";
-		hiddenResetBtn.style.display = "block";
+		hiddenResetBtn.style.display = "flex";
 		hiddenTemp.style.display = "none";
 		hiddenMass.style.display = "none";
 		hiddenTime.style.display = "none";
@@ -81,7 +81,7 @@
 	// Temperature
 	btnTemp.addEventListener("click", function () {
 		hiddenTemp.style.display = "block";
-		hiddenResetBtn.style.display = "block";
+		hiddenResetBtn.style.display = "flex";
 		hiddenMass.style.display = "none";
 		hiddenDist.style.display = "none";
 		hiddenTime.style.display = "none";
@@ -89,7 +89,7 @@
 	// Mass
 	btnMass.addEventListener("click", function () {
 		hiddenMass.style.display = "flex";
-		hiddenResetBtn.style.display = "block";
+		hiddenResetBtn.style.display = "flex";
 		hiddenTemp.style.display = "none";
 		hiddenDist.style.display = "none";
 		hiddenTime.style.display = "none";
@@ -97,7 +97,7 @@
 	// Time
 	btnTime.addEventListener("click", function () {
 		hiddenTime.style.display = "flex";
-		hiddenResetBtn.style.display = "block";
+		hiddenResetBtn.style.display = "flex";
 		hiddenTemp.style.display = "none";
 		hiddenDist.style.display = "none";
 		hiddenMass.style.display = "none";

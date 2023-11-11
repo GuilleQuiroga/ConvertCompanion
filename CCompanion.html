@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Convert Companion</title>
+	<link rel="stylesheet" href="css/mainStyle.css" />
+	<link rel="shortcut icon" href="resources/favicon.svg" type="image/svg">
+	<script src="https://kit.fontawesome.com/52a64e3610.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<div class="logo__container" id="logoReset">
+			<span class="logo">
+				<i class="fa-solid fa-ruler-combined"></i>
+			</span>
+		</div>
+		<div class="tittle__container">
+			<button id="tittleReset">Convert Companion</button>
+		</div>
+		<nav class="btn__container">
+			<button class="btnGral" id="dist"><i class="fa-solid fa-pen-ruler"></i>&nbsp;DIST</button>
+			<button class="btnGral" id="temp"><i class="fa-solid fa-temperature-three-quarters"></i>&nbsp;TEMP</button>
+			<button class="btnGral" id="mass"><i class="fa-solid fa-scale-unbalanced"></i>&nbsp;MASS</button>
+			<button class="btnGral" id="time"><i class="fa-regular fa-clock"></i>&nbsp;TIME</button>
+		</nav>
+		<div class="contact__container">
+			<a href="https://www.linkedin.com/in/guillermo-quiroga-b34820284/" target="_blank"><i
+					class="fa-brands fa-linkedin"></i></a>
+			<a href="https://github.com/MamaKapu" target="_blank"><i class="fa-brands fa-github"></i></a>
+			<a href="mailto:info@convertcompanion.com"><i class="fa-regular fa-envelope"></i></a>
+		</div>
+	</header>
+
+	<!-- Distances -->
+	<div class="dst__group" id="dst__group">
+		<div class="inside__container__dist">
+			<label for="millimeters" class="dist__lbl"><span class="mm__span">
+					MILLIMETERS
+				</span></label>
+			<input type="input" class="dist_input" id="millimeters"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" autofocus />
+			<label for="centimeters" class="dist__lbl"><span class="cm__span">
+					CENTIMETERS
+				</span></label>
+			<input type="input" class="dist_input" id="centimeters"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="meters" class="dist__lbl"><span class="m__span">
+					METERS
+				</span></label>
+			<input type="input" class="dist_input" id="meters"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="kilometers" class="dist__lbl"><span class="km__span">
+					KILOMETERS
+				</span></label>
+			<input type="input" class="dist_input" id="kilometers"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="miles" class="dist__lbl"><span class="miles__span">
+					MILES
+				</span></label>
+			<input type="input" class="dist_input" id="miles"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		</div>
+		<div class="inside__container__dist">
+			<label for="nauticMiles" class="dist__lbl"><span class="nautMiles__span">
+					NAUTIC MILES
+				</span></label>
+			<input type="input" class="dist_input" id="nauticMiles"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="inches" class="dist__lbl"><span class="inch__span">
+					INCHES
+				</span></label>
+			<input type="input" class="dist_input" id="inches"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="yards" class="dist__lbl"><span class="yard__span">
+					YARDS
+				</span></label>
+			<input type="input" class="dist_input" id="yards"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="feets" class="dist__lbl"><span class="feet__span">
+					FEETS
+				</span></label>
+			<input type="input" class="dist_input" id="feets"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		</div>
+	</div>
+
+	<!-- Temperature -->
+	<div class="temp__group field" id="temp__group">
+		<label for="celsius" class="temps__lbl"><span class="cls__span">
+				CELSIUS
+			</span></label>
+		<input type="input" class="temp_input" id="celsius" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')"
+			autofocus />
+		<label for="fahren" class="temps__lbl"><span class="fahren__span">
+				FAHRENHEIT
+			</span></label>
+		<input type="input" class="temp_input" id="fahren" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')" />
+		<label for="kelvin" class="temps__lbl"><span class="kelvin__span">KELVIN</span></label>
+		<input type="input" class="temp_input" id="kelvin" oninput="this.value = this.value.replace(/[^0-9.-]/g, '')" />
+	</div>
+
+	<!-- Mass -->
+	<div class="mass__group field" id="mass__group">
+		<div class="inside__container__mass">
+			<label for="milligrams" class="mass__lbl"><span class="mlg__span">
+					MILLIGRAMS
+				</span></label>
+			<input type="input" class="mass__input" id="milligrams"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" autofocus />
+			<label for="grams" class="mass__lbl"><span class="gr__span">
+					GRAMS
+				</span></label>
+			<input type="input" class="mass__input" id="grams"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="kilograms" class="mass__lbl"><span class="kg__span">
+					KILOGRAMS
+				</span></label>
+			<input type="input" class="mass__input" id="kilograms"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		</div>
+		<div class="inside__container__mass">
+			<label for="tons" class="mass__lbl"><span class="tons__span">
+					TONS
+				</span></label>
+			<input type="input" class="mass__input" id="tons"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="pounds" class="mass__lbl"><span class="pounds__span">
+					POUNDS
+				</span></label>
+			<input type="input" class="mass__input" id="pounds"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="ounces" class="mass__lbl"><span class="ounces__span">
+					OUNCES
+				</span></label>
+			<input type="input" class="mass__input" id="ounces"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		</div>
+	</div>
+
+	<!-- Time -->
+	<div class="time__group field" id="time__group">
+		<div class="inside__container_time">
+			<label for="milliseconds" class="time__lbl"><span class="ms__span">
+					MILISECONDS
+				</span></label>
+			<input type="input" class="time__input" id="milliseconds"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" autofocus />
+			<label for="seconds" class="time__lbl"><span class="sec__span">
+					SECONDS
+				</span></label>
+			<input type="input" class="time__input" id="seconds"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="minutes" class="time__lbl"><span class="min__span">
+					MINUTES
+				</span></label>
+			<input type="input" class="time__input" id="minutes"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="hours" class="time__lbl"><span class="hrs__span">
+					HOURS
+				</span></label>
+			<input type="input" class="time__input" id="hours"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="days" class="time__lbl"><span class="day__span">
+					DAYS
+				</span></label>
+			<input type="input" class="time__input" id="days"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		</div>
+		<div class="inside__container_time">
+			<label for="weeks" class="time__lbl"><span class="week__span">
+					WEEKS
+				</span></label>
+			<input type="input" class="time__input" id="weeks"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="months" class="time__lbl"><span class="month__span">
+					MONTHS <em>(30 days)</em>
+				</span></label>
+			<input type="input" class="time__input" id="months"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="years" class="time__lbl"><span class="year__span">
+					YEARS <em>(365 days)</em>
+				</span></label>
+			<input type="input" class="time__input" id="years"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+			<label for="centuries" class="time__lbl"><span class="century__span">
+					CENTURIES
+				</span></label>
+			<input type="input" class="time__input" id="centuries"
+				oninput="this.value = this.value.replace(/[^0-9.]/g, '')" />
+		</div>
+	</div>
+
+	<!-- Reset button -->
+	<div class="reset__container" id="reset__container">
+		<button type="reset" id="btnReset"><i class="fa-solid fa-rotate-left"></i></button>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>

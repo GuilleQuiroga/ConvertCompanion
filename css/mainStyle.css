@@ -16,27 +16,15 @@ header {
 	color: #ffffff;
 	width: 100%;
 	height: 80px;
-	margin: 40px auto;
-	display: inline-flex;
+	margin-top: 40px;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0 0 30px 0 #557c93;
 	background: hsla(213, 77%, 14%, 1);
-	background: linear-gradient(
-		90deg,
-		hsla(213, 77%, 14%, 1) 0%,
-		hsla(202, 27%, 45%, 1) 100%
-	);
-	background: -moz-linear-gradient(
-		90deg,
-		hsla(213, 77%, 14%, 1) 0%,
-		hsla(202, 27%, 45%, 1) 100%
-	);
-	background: -webkit-linear-gradient(
-		90deg,
-		hsla(213, 77%, 14%, 1) 0%,
-		hsla(202, 27%, 45%, 1) 100%
-	);
+	background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+	background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+	background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
 	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
 }
 
@@ -47,12 +35,12 @@ a {
 }
 
 #tittleReset {
-	width: 150px;
+	width: 200px;
 	text-align: center;
 	color: #ffffff;
 	background: rgba(255, 0, 0, 0);
 	border: none;
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	margin-right: 50px;
 	user-select: none;
 }
@@ -84,7 +72,6 @@ a {
 	justify-content: center;
 	font-size: 30px;
 	width: 250px;
-	margin-left: 20px;
 }
 
 .contact__container i {
@@ -128,6 +115,7 @@ button:hover {
 }
 
 .tittle__container {
+	display: flex;
 	font-size: 1.5rem;
 }
 
@@ -144,6 +132,7 @@ button:hover {
 	display: flex;
 	flex: 1;
 	height: 50%;
+	margin-top: 65px;
 	flex-direction: column;
 	max-width: 510px;
 	padding-left: 50px;
@@ -155,22 +144,20 @@ button:hover {
 	border: 0;
 	border-bottom: 1px solid #557c93;
 	outline: none;
-	margin-bottom: 5%;
+	margin-bottom: 8%;
 	background: none;
 	color: #ffffff;
-	font-size: 0.5rem;
+	font-size: 1.5rem;
 }
 
 /* TEMPERATURE */
 .temp__group {
 	margin: 0 auto;
 	flex-direction: column;
-	align-items: center; /* Centra horizontalmente los elementos */
-	justify-content: center; /* Centra verticalmente los elementos */
-	margin-top: 60px;
+	align-items: center;
+	justify-content: center;
+	margin-top: 105px;
 	width: 25%;
-	height: 450px;
-	padding: 20px;
 	color: #ffffff;
 }
 
@@ -183,7 +170,7 @@ button:hover {
 	margin-bottom: 50px;
 	background: none;
 	color: #ffffff;
-	font-size: 20px;
+	font-size: 1.5rem;
 }
 
 /* MASS */
@@ -199,6 +186,7 @@ button:hover {
 	display: flex;
 	flex: 1;
 	height: 50%;
+	margin-top: 65px;
 	flex-direction: column;
 	max-width: 510px;
 	padding-left: 50px;
@@ -210,10 +198,10 @@ button:hover {
 	border: 0;
 	border-bottom: 1px solid #557c93;
 	outline: none;
-	margin-bottom: 5%;
+	margin-bottom: 8%;
 	background: none;
 	color: #ffffff;
-	font-size: 20px;
+	font-size: 1.5rem;
 }
 
 /* TIME */
@@ -228,6 +216,7 @@ button:hover {
 .inside__container_time {
 	display: flex;
 	flex: 1;
+	margin-top: 65px;
 	flex-direction: column;
 	max-width: 510px;
 	padding-left: 50px;
@@ -239,10 +228,10 @@ button:hover {
 	border: 0;
 	border-bottom: 1px solid #557c93;
 	outline: none;
-	margin-bottom: 5%;
+	margin-bottom: 8%;
 	background: none;
 	color: #ffffff;
-	font-size: 20px;
+	font-size: 1.5rem;
 }
 
 /* RESET BUTTON */
@@ -257,21 +246,9 @@ button:hover {
 	height: 40px;
 	border-radius: 30px;
 	background: hsla(213, 77%, 14%, 1);
-	background: linear-gradient(
-		90deg,
-		hsla(213, 77%, 14%, 1) 0%,
-		hsla(202, 27%, 45%, 1) 100%
-	);
-	background: -moz-linear-gradient(
-		90deg,
-		hsla(213, 77%, 14%, 1) 0%,
-		hsla(202, 27%, 45%, 1) 100%
-	);
-	background: -webkit-linear-gradient(
-		90deg,
-		hsla(213, 77%, 14%, 1) 0%,
-		hsla(202, 27%, 45%, 1) 100%
-	);
+	background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+	background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+	background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
 	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
 	outline: none;
 	cursor: pointer;
@@ -299,115 +276,10 @@ button:hover {
 
 /* Portatil 15' */
 @media screen and (max-width: 1368px) {
-	header {
-		color: #ffffff;
-		width: 100%;
-		height: 80px;
-		margin: 40px auto;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		box-shadow: 0 0 30px 0 #557c93;
-		background: hsla(213, 77%, 14%, 1);
-		background: linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
-		background: -moz-linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
-		background: -webkit-linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
-		filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
-	}
-
-	a {
-		text-decoration: none;
-		color: inherit;
-		cursor: pointer;
-	}
-
-	#tittleReset {
-		width: 250px;
-		text-align: center;
-	}
-
-	.btn__container {
-		display: flex;
-		margin: 0 auto;
-		flex-direction: row;
-		width: 75%;
-		height: 100%;
-		text-align: center;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.btnGral {
-		color: #ffffff;
-		background: rgba(255, 0, 0, 0);
-		border: none;
-		font-size: 1rem;
-		margin-right: 50px;
-		background-color: 0%;
-	}
-
-	.contact__container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 30px;
-		width: 250px;
-		margin-left: 20px;
-	}
-
-	.contact__container i {
-		margin-right: 20px;
-	}
-
-	.contact__container i:hover {
-		color: #a8c3d3;
-		transition: 0.3s;
-	}
-
-	button {
-		width: auto;
-		height: 40px;
-		cursor: pointer;
-	}
-
-	button:hover {
-		color: #a8c3d3;
-		transition: 0.5s;
-	}
-
-	.logo__container {
-		width: 10%;
-		height: 100%;
-		display: grid;
-	}
-
-	.logo__container .logo {
-		font-size: 3em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.tittle__container {
-		font-size: 1.25rem;
-	}
-
 	/* DISTANCE */
 	.dst__group {
-		flex-direction: row;
-		margin: 0 auto;
+		display: block;
+		margin-top: 30px;
 		width: 50%;
 		height: 50%;
 		color: #ffffff;
@@ -417,6 +289,7 @@ button:hover {
 		display: flex;
 		flex: 1;
 		height: 50%;
+		margin-top: 0;
 		flex-direction: column;
 		max-width: 510px;
 		padding-left: 50px;
@@ -428,16 +301,16 @@ button:hover {
 		border: 0;
 		border-bottom: 1px solid #557c93;
 		outline: none;
-		/* margin-bottom: 5%; */
 		background: none;
 		color: #ffffff;
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 
 	/* TEMPERATURE */
 	.temp__group {
 		margin: 0 auto;
 		width: 30%;
+		margin-top: 30px;
 		height: 50%;
 		color: #ffffff;
 	}
@@ -448,16 +321,16 @@ button:hover {
 		border: 0;
 		border-bottom: 1px solid #557c93;
 		outline: none;
-		/* margin-bottom: 5%; */
 		background: none;
 		color: #ffffff;
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 
 	/* MASS */
 	.mass__group {
-		flex-direction: row;
+		display: block;
 		margin: 0 auto;
+		margin-top: 30px;
 		width: 50%;
 		height: 50%;
 		color: #ffffff;
@@ -466,6 +339,7 @@ button:hover {
 	.inside__container__mass {
 		display: flex;
 		flex: 1;
+		margin-top: 0;
 		height: 50%;
 		flex-direction: column;
 		max-width: 510px;
@@ -475,19 +349,20 @@ button:hover {
 	.mass__input {
 		height: 45px;
 		width: 100%;
+		margin-top: 30px;
 		border: 0;
 		border-bottom: 1px solid #557c93;
 		outline: none;
-		margin-bottom: 5%;
 		background: none;
 		color: #ffffff;
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 
 	/* TIME */
 	.time__group {
-		flex-direction: row;
+		display: block;
 		margin: 0 auto;
+		margin-top: 30px;
 		width: 50%;
 		height: 50%;
 		color: #ffffff;
@@ -496,6 +371,7 @@ button:hover {
 	.inside__container_time {
 		display: flex;
 		flex: 1;
+		margin-top: 0;
 		flex-direction: column;
 		max-width: 510px;
 		padding-left: 50px;
@@ -505,12 +381,12 @@ button:hover {
 		height: 45px;
 		width: 100%;
 		border: 0;
+		margin-top: 30px;
 		border-bottom: 1px solid #557c93;
 		outline: none;
-		margin-bottom: 5%;
 		background: none;
 		color: #ffffff;
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 
 	/* RESET BUTTON */
@@ -525,21 +401,9 @@ button:hover {
 		height: 40px;
 		border-radius: 30px;
 		background: hsla(213, 77%, 14%, 1);
-		background: linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
-		background: -moz-linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
-		background: -webkit-linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
+		background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+		background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+		background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
 		filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
 		outline: none;
 		cursor: pointer;
@@ -564,7 +428,7 @@ button:hover {
 	}
 }
 
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1210px) {
 	.dst__group {
 		display: flex;
 		flex-direction: column;
@@ -618,21 +482,9 @@ button:hover {
 		height: 60px;
 		border-radius: 30px;
 		background: hsla(213, 77%, 14%, 1);
-		background: linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
-		background: -moz-linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
-		background: -webkit-linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
+		background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+		background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+		background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
 		filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
 		outline: none;
 		cursor: pointer;
@@ -646,31 +498,65 @@ button:hover {
 
 	header {
 		color: #ffffff;
-		width: 10%;
+		width: 15%;
 		height: 100%;
-		position: fixed; /* Cambia a position: fixed */
-		right: 40px; /* Añade 40px de espacio a la derecha */
-		top: 0;
-		display: inline-flex;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-right: 40px;
+		position: fixed;
+		right: 0;
+		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		box-shadow: 0 0 30px 0 #557c93;
+		box-shadow: -10px 0 30px 0 #557c93;
 		background: hsla(213, 77%, 14%, 1);
-		background: linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
-		background: -moz-linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
-		background: -webkit-linear-gradient(
-			90deg,
-			hsla(213, 77%, 14%, 1) 0%,
-			hsla(202, 27%, 45%, 1) 100%
-		);
-		filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
+		background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+		background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+		background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08203E", endColorstr="#557C93", GradientType=1);
+	}
+
+	#tittleReset {
+		display: none;
+	}
+
+	.logo__container {
+		width: 100%;
+		height: 20%;
+		display: grid;
+	}
+
+	.contact__container {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 40%;
+	}
+
+	.contact__container a {
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.contact__container i {
+		margin: 0;
+	}
+
+	.btn__container {
+		display: grid;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		user-select: none;
+	}
+
+	.btnGral {
+		font-size: 1rem;
+		margin-right: 0;
 	}
 }

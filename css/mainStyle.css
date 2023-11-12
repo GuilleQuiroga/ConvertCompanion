@@ -20,11 +20,16 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: 0 0 30px 0 #557c93;
-	background: hsla(213, 77%, 14%, 1);
-	background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-	background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-	background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+	background: -moz-linear-gradient(
+		90deg,
+		hsla(213, 77%, 14%, 1) 0%,
+		hsla(202, 27%, 45%, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		hsla(213, 77%, 14%, 1) 0%,
+		hsla(202, 27%, 45%, 1) 100%
+	);
 	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
 }
 
@@ -43,6 +48,7 @@ a {
 	font-size: 1.2rem;
 	margin-right: 50px;
 	user-select: none;
+	cursor: pointer;
 }
 
 .btn__container {
@@ -246,9 +252,21 @@ button:hover {
 	height: 40px;
 	border-radius: 30px;
 	background: hsla(213, 77%, 14%, 1);
-	background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-	background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-	background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+	background: linear-gradient(
+		90deg,
+		hsla(213, 77%, 14%, 1) 0%,
+		hsla(202, 27%, 45%, 1) 100%
+	);
+	background: -moz-linear-gradient(
+		90deg,
+		hsla(213, 77%, 14%, 1) 0%,
+		hsla(202, 27%, 45%, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		hsla(213, 77%, 14%, 1) 0%,
+		hsla(202, 27%, 45%, 1) 100%
+	);
 	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
 	outline: none;
 	cursor: pointer;
@@ -329,7 +347,6 @@ button:hover {
 	/* MASS */
 	.mass__group {
 		display: block;
-		margin: 0 auto;
 		margin-top: 30px;
 		width: 50%;
 		height: 50%;
@@ -339,8 +356,8 @@ button:hover {
 	.inside__container__mass {
 		display: flex;
 		flex: 1;
-		margin-top: 0;
 		height: 50%;
+		margin-top: 0;
 		flex-direction: column;
 		max-width: 510px;
 		padding-left: 50px;
@@ -349,7 +366,6 @@ button:hover {
 	.mass__input {
 		height: 45px;
 		width: 100%;
-		margin-top: 30px;
 		border: 0;
 		border-bottom: 1px solid #557c93;
 		outline: none;
@@ -361,7 +377,6 @@ button:hover {
 	/* TIME */
 	.time__group {
 		display: block;
-		margin: 0 auto;
 		margin-top: 30px;
 		width: 50%;
 		height: 50%;
@@ -371,6 +386,7 @@ button:hover {
 	.inside__container_time {
 		display: flex;
 		flex: 1;
+		height: 50%;
 		margin-top: 0;
 		flex-direction: column;
 		max-width: 510px;
@@ -381,7 +397,6 @@ button:hover {
 		height: 45px;
 		width: 100%;
 		border: 0;
-		margin-top: 30px;
 		border-bottom: 1px solid #557c93;
 		outline: none;
 		background: none;
@@ -401,9 +416,21 @@ button:hover {
 		height: 40px;
 		border-radius: 30px;
 		background: hsla(213, 77%, 14%, 1);
-		background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-		background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-		background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+		background: linear-gradient(
+			90deg,
+			hsla(213, 77%, 14%, 1) 0%,
+			hsla(202, 27%, 45%, 1) 100%
+		);
+		background: -moz-linear-gradient(
+			90deg,
+			hsla(213, 77%, 14%, 1) 0%,
+			hsla(202, 27%, 45%, 1) 100%
+		);
+		background: -webkit-linear-gradient(
+			90deg,
+			hsla(213, 77%, 14%, 1) 0%,
+			hsla(202, 27%, 45%, 1) 100%
+		);
 		filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
 		outline: none;
 		cursor: pointer;
@@ -435,7 +462,7 @@ button:hover {
 		margin: 0 auto;
 		width: 65%;
 		padding: 20px;
-		color: #d8d8d8;
+		color: #ffffff;
 		margin-top: 35px;
 	}
 
@@ -443,9 +470,9 @@ button:hover {
 		display: flex;
 		flex-direction: column;
 		margin: 0 auto;
-		width: 55%;
+		width: 48%;
 		padding: 20px;
-		color: #d8d8d8;
+		color: #ffffff;
 		margin-top: 35px;
 	}
 
@@ -455,7 +482,7 @@ button:hover {
 		margin: 0 auto;
 		width: 65%;
 		padding: 20px;
-		color: #d8d8d8;
+		color: #ffffff;
 		margin-top: 35px;
 	}
 
@@ -465,7 +492,7 @@ button:hover {
 		margin: 0 auto;
 		width: 65%;
 		padding: 20px;
-		color: #d8d8d8;
+		color: #ffffff;
 		margin-top: 35px;
 	}
 
@@ -482,9 +509,21 @@ button:hover {
 		height: 60px;
 		border-radius: 30px;
 		background: hsla(213, 77%, 14%, 1);
-		background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-		background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-		background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+		background: linear-gradient(
+			90deg,
+			hsla(213, 77%, 14%, 1) 0%,
+			hsla(202, 27%, 45%, 1) 100%
+		);
+		background: -moz-linear-gradient(
+			90deg,
+			hsla(213, 77%, 14%, 1) 0%,
+			hsla(202, 27%, 45%, 1) 100%
+		);
+		background: -webkit-linear-gradient(
+			90deg,
+			hsla(213, 77%, 14%, 1) 0%,
+			hsla(202, 27%, 45%, 1) 100%
+		);
 		filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#08203E", endColorstr="#557C93", GradientType=1 );
 		outline: none;
 		cursor: pointer;
@@ -509,11 +548,16 @@ button:hover {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		box-shadow: -10px 0 30px 0 #557c93;
-		background: hsla(213, 77%, 14%, 1);
-		background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-		background: -moz-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
-		background: -webkit-linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+		background: -moz-linear-gradient(
+			90deg,
+			hsla(213, 77%, 14%, 1) 0%,
+			hsla(202, 27%, 45%, 1) 100%
+		);
+		background: -webkit-linear-gradient(
+			90deg,
+			hsla(213, 77%, 14%, 1) 0%,
+			hsla(202, 27%, 45%, 1) 100%
+		);
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#08203E", endColorstr="#557C93", GradientType=1);
 	}
 

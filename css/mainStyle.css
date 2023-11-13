@@ -96,7 +96,8 @@ label {
 #dist,
 #temp,
 #mass,
-#time {
+#time,
+#freq {
 	width: auto;
 	height: 40px;
 	cursor: pointer;
@@ -235,6 +236,28 @@ button:hover {
 	border-bottom: 1px solid #557c93;
 	outline: none;
 	margin-bottom: 8%;
+	background: none;
+	color: #ffffff;
+	font-size: 1.5rem;
+}
+
+/* FREQUENCY */
+.freq__group {
+	margin: 0 auto;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 105px;
+	width: 25%;
+	color: #ffffff;
+}
+
+.freq_input {
+	height: 45px;
+	width: 100%;
+	border: 0;
+	border-bottom: 1px solid #557c93;
+	outline: none;
+	margin-bottom: 50px;
 	background: none;
 	color: #ffffff;
 	font-size: 1.5rem;
@@ -404,6 +427,26 @@ button:hover {
 		font-size: 1.5rem;
 	}
 
+	/* TEMPERATURE */
+	.freq__group {
+		margin: 0 auto;
+		width: 30%;
+		margin-top: 30px;
+		height: 50%;
+		color: #ffffff;
+	}
+
+	.freq_input {
+		height: 45px;
+		width: 100%;
+		border: 0;
+		border-bottom: 1px solid #557c93;
+		outline: none;
+		background: none;
+		color: #ffffff;
+		font-size: 1.5rem;
+	}
+
 	/* RESET BUTTON */
 	.reset__container {
 		display: flex;
@@ -491,6 +534,16 @@ button:hover {
 		flex-direction: column;
 		margin: 0 auto;
 		width: 65%;
+		padding: 20px;
+		color: #ffffff;
+		margin-top: 35px;
+	}
+
+	.freq__group {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		width: 48%;
 		padding: 20px;
 		color: #ffffff;
 		margin-top: 35px;

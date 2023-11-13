@@ -7,6 +7,7 @@
 	const btnTemp = document.querySelector("#temp");
 	const btnMass = document.querySelector("#mass");
 	const btnTime = document.querySelector("#time");
+	const btnFreq = document.querySelector("#freq");
 
 	/*******************************************************************
 	 ***************************  INPUTS  ******************************
@@ -43,6 +44,11 @@
 	const months = document.querySelector("#months");
 	const years = document.querySelector("#years");
 	const centuries = document.querySelector("#centuries");
+	// Temperature
+	const hertz = document.querySelector("#hertz");
+	const kilohertz = document.querySelector("#kilohertz");
+	const megahertz = document.querySelector("#megahertz");
+	const gigahertz = document.querySelector("#gigahertz");
 
 	/*******************************************************************
 	 ****************	HIDDEN ELEMENTS FROM HTML  *********************
@@ -70,6 +76,10 @@
 	const hiddenTime = document.getElementById("time__group");
 	hiddenTime.style.display = "none";
 
+	// Frequency
+	const hiddenFreq = document.getElementById("freq__group");
+	hiddenFreq.style.display = "none";
+
 	/*******************************************************************
 	 *******************  SHOW ELEMENTS FROM HTML  *********************
 	 *******************************************************************/
@@ -80,6 +90,7 @@
 		hiddenTemp.style.display = "none";
 		hiddenMass.style.display = "none";
 		hiddenTime.style.display = "none";
+		hiddenFreq.style.display = "none";
 	});
 	// Temperature
 	btnTemp.addEventListener("click", function () {
@@ -88,6 +99,7 @@
 		hiddenMass.style.display = "none";
 		hiddenDist.style.display = "none";
 		hiddenTime.style.display = "none";
+		hiddenFreq.style.display = "none";
 	});
 	// Mass
 	btnMass.addEventListener("click", function () {
@@ -96,6 +108,7 @@
 		hiddenTemp.style.display = "none";
 		hiddenDist.style.display = "none";
 		hiddenTime.style.display = "none";
+		hiddenFreq.style.display = "none";
 	});
 	// Time
 	btnTime.addEventListener("click", function () {
@@ -104,6 +117,16 @@
 		hiddenTemp.style.display = "none";
 		hiddenDist.style.display = "none";
 		hiddenMass.style.display = "none";
+		hiddenFreq.style.display = "none";
+	});
+	// Frequency
+	btnFreq.addEventListener("click", function () {
+		hiddenFreq.style.display = "flex";
+		hiddenResetBtn.style.display = "flex";
+		hiddenTemp.style.display = "none";
+		hiddenDist.style.display = "none";
+		hiddenMass.style.display = "none";
+		hiddenTime.style.display = "none";
 	});
 	// Main reset
 	resetWeb.addEventListener("click", function () {
@@ -112,6 +135,7 @@
 		hiddenTemp.style.display = "none";
 		hiddenDist.style.display = "none";
 		hiddenMass.style.display = "none";
+		hiddenFreq.style.display = "none";
 	});
 
 	/*******************************************************************
@@ -701,6 +725,75 @@
 		};
 
 		if (centuries == "") {
+			conversions[unit] = null;
+		} else {
+			return conversions[unit] || "Invalid unit";
+		}
+	};
+
+	// FREQUENCY
+	// Hertz
+	const convertFromHertz = (unit) => {
+		const hertz = parseFloat(document.querySelector("#hertz").value);
+
+		const conversions = {
+			kilohertz: (hertz / 1000).toFixed(4),
+			megahertz: (hertz / 1000000).toFixed(7),
+			gigahertz: (hertz / 1000000000).toFixed(10),
+		};
+
+		if (hertz == "") {
+			conversions[unit] = null;
+		} else {
+			return conversions[unit] || "Invalid unit";
+		}
+	};
+
+	// Kilohertz
+	const convertFromKilohertz = (unit) => {
+		const kilohertz = parseFloat(document.querySelector("#kilohertz").value);
+
+		const conversions = {
+			hertz: (kilohertz * 1000).toFixed(2),
+			megahertz: (kilohertz / 1000).toFixed(4),
+			gigahertz: (kilohertz / 1000000).toFixed(6),
+		};
+
+		if (kilohertz == "") {
+			conversions[unit] = null;
+		} else {
+			return conversions[unit] || "Invalid unit";
+		}
+	};
+
+	// Megahertz
+	const convertFromMegahertz = (unit) => {
+		const megahertz = parseFloat(document.querySelector("#megahertz").value);
+
+		const conversions = {
+			hertz: (megahertz * 1000000).toFixed(2),
+			kilohertz: (megahertz * 1000).toFixed(2),
+			gigahertz: (megahertz / 1000).toFixed(4),
+		};
+
+		if (megahertz == "") {
+			conversions[unit] = null;
+		} else {
+			return conversions[unit] || "Invalid unit";
+		}
+	};
+
+	// Gigahertz
+	const convertFromGigahertz = (unit) => {
+		const gigahertz = parseFloat(document.querySelector("#gigahertz").value);
+
+		const conversions = {
+			hertz: (gigahertz * 1000000000).toFixed(2),
+			kilohertz: (gigahertz * 1000000).toFixed(2),
+			megahertz: (gigahertz * 1000).toFixed(2),
+		};
+
+		if (gigahertz == "") {
 			conversions[unit] = null;
 		} else {
 			return conversions[unit] || "Invalid unit";
@@ -1330,6 +1423,67 @@
 		}
 	});
 
+	// FREQUENCY
+	// Hertz
+	hertz.addEventListener("keyup", () => {
+		const inputHertz = parseFloat(hertz.value);
+
+		if (isNaN(inputHertz) || inputHertz == "") {
+			kilohertz.value = "";
+			megahertz.value = "";
+			gigahertz.value = "";
+		} else {
+			kilohertz.value = convertFromHertz("kilohertz");
+			megahertz.value = convertFromHertz("megahertz");
+			gigahertz.value = convertFromHertz("gigahertz");
+		}
+	});
+
+	// Kilohertz
+	kilohertz.addEventListener("keyup", () => {
+		const inputKilohertz = parseFloat(kilohertz.value);
+
+		if (isNaN(inputKilohertz) || inputKilohertz == "") {
+			hertz.value = "";
+			megahertz.value = "";
+			gigahertz.value = "";
+		} else {
+			hertz.value = convertFromKilohertz("hertz");
+			megahertz.value = convertFromKilohertz("megahertz");
+			gigahertz.value = convertFromKilohertz("gigahertz");
+		}
+	});
+
+	// Megahertz
+	megahertz.addEventListener("keyup", () => {
+		const inputMegahertz = parseFloat(megahertz.value);
+
+		if (isNaN(inputMegahertz) || inputMegahertz == "") {
+			hertz.value = "";
+			kilohertz.value = "";
+			gigahertz.value = "";
+		} else {
+			hertz.value = convertFromMegahertz("hertz");
+			kilohertz.value = convertFromMegahertz("kilohertz");
+			gigahertz.value = convertFromMegahertz("gigahertz");
+		}
+	});
+
+	// Gigahertz
+	gigahertz.addEventListener("keyup", () => {
+		const inputGigahertz = parseFloat(gigahertz.value);
+
+		if (isNaN(inputGigahertz) || inputGigahertz == "") {
+			hertz.value = "";
+			kilohertz.value = "";
+			megahertz.value = "";
+		} else {
+			hertz.value = convertFromGigahertz("hertz");
+			kilohertz.value = convertFromGigahertz("kilohertz");
+			megahertz.value = convertFromGigahertz("megahertz");
+		}
+	});
+
 	/*******************************************************************
 	 *************************  RESET INPUTS  **************************
 	 *******************************************************************/
@@ -1361,5 +1515,9 @@
 		months.value = "";
 		years.value = "";
 		centuries.value = "";
+		hertz.value = "";
+		kilohertz.value = "";
+		megahertz.value = "";
+		gigahertz.value = "";
 	});
 })();

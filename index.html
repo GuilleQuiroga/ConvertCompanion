@@ -35,6 +35,9 @@
 				<button class="btnGral" id="time">
 					<i class="fa-regular fa-clock"></i>&nbsp;TIME
 				</button>
+				<button class="btnGral" id="freq">
+					<i class="fa-solid fa-wave-square"></i>&nbsp;FREQ
+				</button>
 			</nav>
 			<div class="contact__container">
 				<a
@@ -324,6 +327,47 @@
 					oninput="this.value = this.value.replace(/[^0-9.]/g, '')"
 				/>
 			</div>
+		</div>
+
+		<!-- Frequency -->
+		<div class="freq__group field" id="freq__group">
+			<label for="hertz" class="freq__lbl"
+				><span class="hertz__span"> HERTZ </span></label
+			>
+			<input
+				type="input"
+				class="freq_input"
+				id="hertz"
+				oninput="this.value = this.value.replace(/[^0-9.-]/g, '')"
+				autofocus
+			/>
+			<label for="kilohertz" class="freq__lbl"
+				><span class="kilohertz__span">KILOHERTZ</span></label
+			>
+			<input
+				type="input"
+				class="freq_input"
+				id="kilohertz"
+				oninput="this.value = this.value.replace(/[^0-9.-]/g, '')"
+			/>
+			<label for="megahertz" class="freq__lbl"
+				><span class="megahertz__span"> MEGAHERTZ </span></label
+			>
+			<input
+				type="input"
+				class="freq_input"
+				id="megahertz"
+				oninput="this.value = this.value.replace(/[^0-9.-]/g, '')"
+			/>
+			<label for="gigahertz" class="freq__lbl"
+				><span class="gigahertz__span">GIGAHERTZ</span></label
+			>
+			<input
+				type="input"
+				class="freq_input"
+				id="gigahertz"
+				oninput="this.value = this.value.replace(/[^0-9.-]/g, '')"
+			/>
 		</div>
 
 		<!-- Reset button -->
